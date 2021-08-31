@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: mongodb-deployment
+  labels:
+    app: mongodb
+spec:
+  replicas: 1
+  selector: 
+    matchLabels: 
+      app: mongodb
+  template:
+ # pod 
+    metadata:
+      labels:
+        app: mongodb
+    spec:
+      containers:
+      - name: mongodb
+        image: mongo
+        ports:
+        # default port proposed by Mongo DB
+        - containerPort: 27017
+        env:
+        - name: MONGO_INITDB_ROOT_USERNAME
+          valueFrom:
+            secretKeyRef:
+            # metadata name in mongo-secret.yaml
+              name: mongodb-secret
+              # mongo-root-username value in mongo-secret.yaml
+              key: mongo-root-username
+        - name: MONGO_INITDB_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+            # metadata name in mongo-secret.yaml
+              name: mongodb-secret
+               # mongo-root-username value in mongo-secret.yaml
+              key: mongo-root-password
+---
+# MongoDb Service configuration document
+apiVersion: v1
+kind: Service
+metadata:
+ name: mongodb-service
+spec:
+  selector:
+    # select name as our pod label name
+    app: mongodb
+  ports:
+   - protocol: TCP
+    # service port to expose
+     port: 27017
+    # container port of deployment 
+     targetPort: 27017
