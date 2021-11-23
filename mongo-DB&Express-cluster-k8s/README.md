@@ -34,7 +34,7 @@ Page d'accueil | Vue de la base de données | Vue Collection | Mise à jour d'un
 
 ## Variables d'environnement
 -----------
-You can use the following [environment variables](https://docs.docker.com/reference/run/#env-environment-variables) to modify the container's configuration:
+Vous pouvez utiliser ce qui suit [Variables d'environnement](https://docs.docker.com/reference/run/#env-environment-variables) pour modifier la configuration du conteneur : 
 
 |Name                              | Default         | Description|
 |----------------------------------|-----------------|------------|
@@ -47,10 +47,10 @@ You can use the following [environment variables](https://docs.docker.com/refere
 |`ME_CONFIG_MONGODB_AUTH_DATABASE` | `db`            | Database name (only needed if `ENABLE_ADMIN` is `"false"`).|
 |`ME_CONFIG_MONGODB_AUTH_USERNAME` | `admin`         | Database username (only needed if `ENABLE_ADMIN` is `"false"`).|
 |`ME_CONFIG_MONGODB_AUTH_PASSWORD` | `pass`          | Database password (only needed if `ENABLE_ADMIN` is `"false"`).|
-|`ME_CONFIG_SITE_BASEURL`          | `/`             | Set the express baseUrl to ease mounting at a subdirectory. Remember to include a|leading and trailing slash.|
-|`ME_CONFIG_SITE_COOKIESECRET`     | `cookiesecret`  | String used by [cookie-parser middleware](https://www.npmjs.com/package|cookie-parser) to sign cookies.|
-|`ME_CONFIG_SITE_SESSIONSECRET`    | `sessionsecret` | String used to sign the session ID cookie by [express-session middleware](https:/|www.npmjs.com/package/express-session).|
-|`ME_CONFIG_BASICAUTH_USERNAME`    | ``              | mongo-express web login name. Sending an empty string will disable basic|authentication.|
+|`ME_CONFIG_SITE_BASEURL`          | `/`             | Set the express baseUrl to ease mounting at a subdirectory. Remember to include a leading and trailing slash.|
+|`ME_CONFIG_SITE_COOKIESECRET`     | `cookiesecret`  | String used by [cookie-parser middleware](https://www.npmjs.com/package) to sign cookies.|
+|`ME_CONFIG_SITE_SESSIONSECRET`    | `sessionsecret` | String used to sign the session ID cookie by [express-session middleware](https://www.npmjs.com/package/express-session).|
+|`ME_CONFIG_BASICAUTH_USERNAME`    | ``              | mongo-express web login name. Sending an empty string will disable basic authentication.|
 |`ME_CONFIG_BASICAUTH_PASSWORD`    | ``              | mongo-express web login password.|
 |`ME_CONFIG_REQUEST_SIZE`          | `100kb`         | Used to configure maximum mongo update payload size. CRUD operations above this size|will fail due to restrictions in [body-parser](https://www.npmjs.com/package/body-parser).|
 |`ME_CONFIG_OPTIONS_EDITORTHEME`   | `rubyblue`      | Web editor color theme, [more here](http://codemirror.net/demo/theme.html).|
