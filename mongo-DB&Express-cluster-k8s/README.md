@@ -24,8 +24,7 @@ Interface d'administration Web MongoDB écrite avec Node.js, Express et Bootstra
 
 ## URL de service externe 
 ----------
-<img src="https://github.com/bosstkd/kubernetes-mongo/blob/main/mongo-DB%26Express-cluster-k8s/Screenshots/external-service-url.png" title="External Service URL from Minikube">
-
+![Alt text](./Screenshots/external-service-url.png?raw=true "Title")
 ## Captures d'écran
 -----------
 Page d'accueil | Vue de la base de données | Vue Collection | Mise à jour d'un document
