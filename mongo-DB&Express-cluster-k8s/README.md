@@ -30,7 +30,7 @@ Interface d'administration Web MongoDB écrite avec Node.js, Express et Bootstra
 -----------
 Page d'accueil | Vue de la base de données | Vue Collection | Mise à jour d'un document
 --- | --- | --- | ---
-<img src="Screenshots/mongo-express-home-page.png" title="Home Page showing databases"> | <img src="Screenshots/mongodb-collections.png" title="Viewing collections in a database" /> | <img src="Screenshots/mongodb-collection-view.png" title="Viewing documents in a collection" /> | <img src="Screenshots/Editing%20the%20documents.png" title="Editing a document" />
+![Alt text](Screenshots/mongo-express-home-page.png?raw=true "Title")| ![Alt text](Screenshots/mongodb-collections.png?raw=true "Title") | ![Alt text](Screenshots/mongodb-collection-view.png?raw=true "Title") | ![Alt text](Screenshots/Editing%20the%20documents.png?raw=true "Title")
 
 ## Variables d'environnement
 -----------
